@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* @import "Rule2.css"; */
+@import url(Rule2.css);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grape+Nuts&family=PT+Sans+Narrow&display=swap');
+/* @Rule */
+
+.c1{
+    color: red;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Grape Nuts', cursive;
+    font-family: 'PT Sans Narrow', sans-serif;
+}

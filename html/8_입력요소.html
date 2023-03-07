@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력요소</title>
+</head>
+<body>
+    <!-- text 한줄짜리 문장열 입력요소 -->
+    <form action="1_기본.html" method="get">
+        <input type="text" name="a1" autofocus="autofocus"><br>
+        <button type="submit">button</button>
+    </form>
+    <!-- password -->
+    <form action="1_기본.html" method="get">
+        <input type="password" name="a1" autofocus="autofocus"><br>
+        <button type="submit">button</button>
+    </form>
+    <!-- textarea 여러줄 문자열 입력 -->
+    <form action="1_기본.html" method="get">
+        <input type="password" name="a1" autofocus="autofocus"><br>
+        <textarea name="a2" cols="30" rows="5" style="resize: none;">aaaa</textarea><br> <!--글자수로 크기조정 - 30글자 5줄| 크기조정 불가-->
+        <textarea name="a3" style="width: 200px; height: 50px;">aaaa</textarea><br> <!--길이로 크기조정-->
+        <button type="submit">button</button>
+    </form>
+    <!-- checkbox -->
+    <form action="1_기본.html" method="get">
+        <fieldset style="width: 200px">
+            <legend>체크박스</legend>
+            <input type="checkbox" name="a1" value="1" checked="checked">체크박스 1<br> <!-- 미리 체크되어나옴-->
+            <input type="checkbox" name="a2" value="2">체크박스 2<br>
+            <input type="checkbox" name="a3" value="3">체크박스 3<br>
+            <button type="submit">button</button>
+        </fieldset>
+    </form>
+    <!-- radio -->
+    <form action="1_기본.html" method="get">
+        <fieldset style="width: 200px">
+            <legend>라디오버튼</legend>
+            <input type="radio" name="a1" value="1" checked="checked">라디오 1<br> <!-- 미리 체크되어나옴-->
+            <input type="radio" name="a1" value="2">라디오 2<br> <!-- name이 같아야함 -->
+            <input type="radio" name="a1" value="3">라디오 3<br>
+            <button type="submit">button</button>
+        </fieldset>
+    </form>
+    <!-- select 한개만 선택할때 -->
+    <select name="a1">
+        <option value="1">항목1</option>
+        <option value="2">항목2</option>
+        <option value="3" selected="selected">항목3</option> <!-- 미리 선택되어나옴-->
+        <option value="4">항목4</option>
+        <option value="5">항목5</option><br/>
+    </select>
+    <!-- select 여러개 선택할때 -->
+    <select name="a1" multiple="multiple">
+        <option value="1">항목1</option>
+        <option value="2">항목2</option>
+        <option value="3" selected="selected">항목3</option>
+        <option value="4" selected="selected">항목4</option>
+        <option value="5">항목5</option><br/>
+    </select>
+    <!-- file -->
+    <input type="file" name="a1"><br/>
+    <!-- hidden -->
+    <input type="hidden" name="a2" value="aaaa"><br>
+    <!-- search -->
+    <input type="search" name="a1"><br/>
+    <!-- numbur -->
+    <form action="1_기본.html">
+        <input type="number" name="number" max="100" min="0" step="2"><br/> <!-- 최댓값 최소값 설정가능, 값 증가량 조정가능-->
+        <button type="submit">확인</button>
+    </form>
+    <!-- range -->
+    <input type="range" name="a1" max="100" min="0"><br>
+    <!-- email -->
+    <form action="1_기본.html">
+      <input type="email" name="a1">
+      <button type="submit">확인</button>
+    </form>
+    <!-- url -->
+    <form action="1_기본.html">
+        <input type="url" name="a1">
+        <button type="submit">확인</button>
+    </form>
+    <!-- 날짜와 시간 -->
+    <form action="1_기본.html">
+        <input type="datetime-local" name="a1"><br>
+        <input type="date" name="a2"><br>
+        <input type="month" name="a3"><br>
+        <input type="week" name="a4"><br>
+        <input type="time" name="a5"><br>
+        <button type="submit">확인</button>
+    </form>
+    <!-- color -->
+    <input type="color" name="a1"><br>
+    <!-- tel -->
+    <input type="tel" name="a1"><br> <!-- 사실상 모바일용 번호키패드생김-->
+</form>
+</body>
+</html>

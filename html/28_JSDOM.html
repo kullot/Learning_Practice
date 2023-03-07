@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSDOM</title>
+</head>
+<body>
+    <script>
+        //DOM : Document Object Model
+
+        //Document : 객체
+        //innerHTML : 태그에 html 코드를 삽입
+        //getElementsById : id 속성을 통해 태그 객체를 가져옴
+        //getElementsByClassName : class 속성을 통해 태그 객체를 가져옴
+        //getElementsByTagName : 태그이름을 통해 태그 객체를 가져옴
+        function find_id(){
+            var a = document.getElementById("a1");
+            var b = document.getElementById("a2");
+            a.innerHTML = "Hello World";
+            b.innerHTML = "Java Script";
+        }
+        function find_class(){
+            var a = document.getElementsByClassName("c1");
+            for(var i in a){
+                a[i].innerHTML = "class 이름";
+            }
+        }
+        function find_tag(){
+            var a = document.getElementsByTagName("div");
+            for(var i in a){
+                a[i].innerHTML = "tag 이름";
+            }
+        }
+        //속성 읽어오기
+        function get_attr(){
+            var result = document.getElementById("result");
+            var img = document.getElementById("img1");
+            result.innerHTML = "id : " + img.id + "<br>" 
+                             + "src : " + img.src + "<br>" 
+                             + "width : " + img.width + "<br>" 
+                             + "height : " + img.height + "<br>";
+        }
+        //속성 설정하기
+        function set_attr(){
+            var img = document.getElementById("img1");
+            img.width = 100;
+            img.height = 100;
+        }
+        //CSS 설정하기
+        function set_style(){
+            var a = document.getElementById("a3");
+            a.style.color = "yellow";
+            a.style.backgroundColor = "black";
+        }
+        function set_html(){
+            var a = document.getElementById("a4");
+            a.innerHTML = "<a href='https://www.bmw.co.kr/ko/index.html'>"
+                        + "<img src='Image/bmw.png'></a>"
+        }
+        function create_tag(){
+            var a = document.getElementById("a5");
+            var tag_a = document.createElement("a");
+            tag_a.href = "https://www.bmw.co.kr/ko/index.html";
+            var t = document.createTextNode("BMW");
+            tag_a.appendChild(t);
+            var tag_img = document.createElement("img");
+            tag_img.src = "image/bmw.png";
+            tag_a.appendChild(tag_img);
+            a.appendChild(tag_a);
+        }
+        BOM 
+    </script>
+    <button onclick="find_id()">id 속성</button>
+    <button onclick="find_class()">class 속성</button>
+    <button onclick="find_tag()">태그 이름</button>
+    <div id="a1" class="c1"></div>
+    <div id="a2" class="c1"></div>
+    <br>
+    <img src="Image\7.png" alt="" id="img1" width="50px" height="50px">
+    <br>
+    <button onclick="get_attr()">속성읽어오기</button>
+    <button onclick="set_attr()">속성설정하기</button>
+    <div id="result"></div>
+    <p id="a3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <button onclick="set_style()">CSS설정하기</button>
+    <div id="a4"></div>
+    <button onclick="set_html()">innerHTML사용</button>
+    <div id="a5"></div>
+    <button onclick="create_tag()">태그객체만들기</button>
+</body>
+</html>

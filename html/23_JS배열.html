@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS배열</title>
+</head>
+<body>
+    <script>
+        var array = [1, 2, 3, 4, 5];
+
+        document.write(array + "<br>");
+        document.write(array.length + "<br>");
+        document.write(array[1] + "<br>");
+        array[3] = 100; //값수정
+        document.write(array + "<br>");
+
+        for(var i = 0; i < array.length; i++){
+            document.write(array[i] + "<br>");
+        }
+
+        // for in문
+        for(var i in array){
+            document.write(array[i] + "<br>");
+        }
+
+        var a = [123, 'aa', 11.11, true];
+        document.write(a + "<br>");
+
+        var b = [];
+        document.write(b.length + "<br>");
+
+        b[0] = 100;
+        b[1] = 'a';
+        document.write(b + "<br>");
+
+        var c = [,,,,,,,]
+        document.write(c.length + "<br>");
+        c[0] = 100;
+        c[1] = 'a';
+        document.write(c + "<br>");
+
+        var d = new Array(11, 22, 33, 44)
+        document.write(d + "<br>");
+        d.push(55) //뒤에 추가
+        document.write(d + "<br>");
+        d.unshift(1) //앞에 추가
+        document.write(d + "<br>");
+        d[10] = 200; //추가, 수정
+        document.write(d + "<br>");
+        d.pop(); //뒤에 삭제
+        document.write(d + "<br>");
+    </script>
+</body>
+</html>

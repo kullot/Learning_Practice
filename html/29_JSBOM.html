@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSBOM</title>
+    <script>
+        function show_alert(){
+            alert("alert 메시지");
+        }
+        function show_confirm(){
+            var a = document.getElementById("a1")
+            var result = confirm("확인 취소 버튼을 누르시오"); //확인인지 취소인지 값이 넘어옴
+            if(result)
+                a.innerHTML = "확인을 눌렀습니다";
+            else
+                a.innerHTML = "취소를 눌렀습니다";
+        }
+        function show_prompt(){
+            var a = document.getElementById("a1")
+            var str = prompt("문자열을 입력하시오", "기본문자열");
+            a.innerHTML = str;
+        }
+        function show_window(){
+            window.open("http://google.com", "_blank");
+        }
+        function get_href(){
+            var a = document.getElementById("a1");
+           a.innerHTML = location.href;
+        }
+        function set_href(){
+            location.href = "http://google.com";
+        }
+    </script>
+</head>
+<body>
+    <div id="a1"></div>
+    <button onclick="show_alert()">alert</button>
+    <button onclick="show_confirm()">confirm</button>
+    <button onclick="show_prompt()">prompt</button>
+    <button onclick="show_window()">새창열기</button>
+    <button onclick="get_href()">주소가져오기</button>
+    <button onclick="set_href()">주소설정하기</button>
+</body>
+</html>

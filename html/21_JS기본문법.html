@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS기본문법</title>
+</head>
+<body>
+    <script>
+        // 세미콜론
+        // document.write("Hello");
+        // document.write("World");
+
+        // 자료형
+        // document.write("정수 : " + 100 + "<br/>");
+        // document.write("실수 : " + 11.11 + "<br/>");
+        // document.write("문자열 : " + "Hello" + "<br/>");
+        // document.write("문자열 : " + 'Hello' + "<br/>");
+        // document.write("참 : " + true + "<br/>");
+        // document.write("거짓 : " + false + "<br/>");
+
+        // 변수
+        // var a = 100;
+        // var b = 11.11;
+        // var c = "문자열"
+        // var d = true;
+        // var e ; //undefined
+        // document.write(e);
+
+        // 연산자
+        // var a = 10;
+        // var b = 3;
+        // // var c = a + b;
+        // // var c2 = a - b;
+        // // var c3 = a * b;
+        // // var c4 = a / b;
+        // // var c5 = a % b;
+        // // var c6 = a ** b;
+        // // document.write(c3);
+        // document.write(a++);
+        // document.write(a);
+        // a++;// a = a + 1
+        // ++a;// a = a + 1
+        // a--;// a = a - 1
+        // --a;// a = a - 1
+
+        // 대입연산자
+        // var a = 10;
+        // var b = 3;
+        // var c;
+        // c += a;
+        // c -= a;
+        // c /= a;
+
+        // 관계비교연산자
+        var a = 10;
+        var b = '10';
+
+        var c = a == b; //값만 같으면 true
+        c = a === b; //타입과 값이 모두 같아야 true
+        c = a !== b; //타입과 값이 모두 같아야 false
+        // c = a != b;
+        // c = a > b;
+        // c = a >= b;
+        // c = a < b;
+        // c = a <= b;
+        document.write(c);
+
+        // 삼항연산자
+        //조건?참:거짓
+        a = 10;
+        b = 3;
+        c = a > b?'크다':'작다'
+        document.write(c);
+
+        // 논리연산자
+        a = 10;
+        b = 3;
+        c = a > 20 && a < 50; //and
+        document.write(c);
+        c = a > 20 || a < 50; //or
+        document.write(c);
+        c = !(a > 5); //not
+        document.write(c);
+
+        // 타입연산자
+        a = true;
+        document.write(typeof a); //타입확인
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS기본</title>
+    <!-- <link rel="stylesheet" href="basic.css"> -->
+    <!-- style 태그는 여러개 적용시 head에 적힌 순서대로 실행-->
+    <style>
+        /*문서전부 적용*/
+        /* *{
+            color: crimson;
+            background-color: antiquewhite;
+        } */
+
+        /* 이름의 태그에 적용 */
+        /* div{
+            color: crimson;
+            background-color: antiquewhite;
+        } */
+
+        /* class 선택 */
+        /* .c1 {
+          color: crimson;
+          background-color: antiquewhite;
+        } */
+
+        /* id 선택 */
+        /* #a1{
+            color: crimson;
+            background-color: antiquewhite; 
+        } */
+        /* .c1{
+            background-color: yellow;
+        }
+        p.c1{
+            background-color: red;
+        } */
+        #a1 > p{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p class="c1">CSS1</p>
+    <p id="a1">CSS2</p>
+    <p>CSS3</p>
+    <div class="c1">div태그</div> -->
+    <div id="a1">
+        <div>
+            <p>id가 a1인 태그안에 div태그안에 p태그</p>
+         </div> 
+         <p>div태그 아래에 p태그</p>
+    </div>
+</body>
+</html>

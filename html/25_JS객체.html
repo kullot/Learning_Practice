@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS객체</title>
+    <script>
+        //객체
+        //프로그램에서 매개체 하나에 값과 기능을 관리
+        //리터럴을 이용한 방법
+        var obj1 = {
+            a1 : 100,
+            a2 : 11.11,
+            'a3' : true,
+            a4 : "hello",
+            a5 : [10, 20, 30, 40],
+            a6 : {
+                b1 : 100,
+                b2 : 200
+            },
+            a7 : function() {
+                document.write('a7 함수 호출' + "<br>");
+            }
+        }
+        var obj2 = {}
+        //생성자 함수를 이용한 방법
+        //규칙은 함수이름이 대문자로 시작
+        //객체를 생성할때 자동으로 함수 호출
+        //동일한 형태의개체를 필요한 만큼 만들수있다
+        //this를 이용해 멤버를 추가
+        function Obj(){
+            document.write('생성자 함수 호출' + "<br>");
+            this.a1 = 100;
+            this.a2 = 200;
+            this.a3 = function(){
+                document.write('a3 함수 호줄' + "<br>");
+            }
+        }
+        function Obj2(a, b){
+            this.a = a;
+            this.b = b;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write(obj1.a1 + "<br>");
+        document.write(obj1.a2 + "<br>");
+        document.write(obj1.a3 + "<br>");
+        document.write(obj1.a4 + "<br>");
+        for(var i in obj1.a5) {
+            document.write(obj1.a5[i] + "<br>");
+        }
+        document.write(obj1.a6.b1 + "<br>");
+        document.write(obj1.a6.b2 + "<br>");
+        obj1.a7();
+        obj1.a1 = 20000;
+        document.write(obj1.a1 + "<br>");
+        //존재하지 않는 멤버에 값을 넣을경우 새로 추가된다
+        document.write(obj2.a1  + "<br>");
+        obj2.a1 = 100;
+        obj2.a2 = 200;
+        document.write(obj2.a1 + '<br/>');
+        document.write(obj2.a2 + '<br/>');
+        //생성자 함수 접근
+        //new 키워드를 이용해 객체를 생성
+        var a = new Obj(); //객체 생성
+        var b = new Obj();
+
+        document.write(a.a1  + "<br>");
+        document.write(a.a2  + "<br>");
+        document.write(b.a1  + "<br>");
+        document.write(b.a2  + "<br>");
+        a.a3();
+        b.a3();
+        a.a1 = 300;
+        document.write(a.a1  + "<br>");
+        document.write(b.a1  + "<br>");
+
+        var c = new Obj2(10, 20);
+        document.write(c.a  + "<br>");
+        document.write(c.b  + "<br>");
+    </script>
+</body>
+</html>

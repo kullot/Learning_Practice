@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+</head>
+<body>
+    <!-- 사용자로부터 입력을 받을때 사용할 수있는 태그 -->
+    <form action="1_기본.html">
+        <input type="button" value="button"> <!--일반버튼 js로 처리-->
+        <input type="reset" value="reset"> <!--입력값 초기화-->
+        <input type="submit" value="submit"> <!--form태그의 action값을 서버로 전달-->
+    </form><br>
+    <form action="1_기본.html"> <!--html5부터 사용-->
+        <button type="button">button</button> <!--일반버튼 js로 처리-->
+        <button type="reset">reset</button> <!--입력값 초기화-->
+        <button type="submit">submit</button> <!--form태그의 action값을 서버로 전달-->
+    </form><br>
+    <!-- 요청방식 -->
+    <!-- GET 서버로 전달하는 값이 주소창에 나타남 -->
+    <!-- POST 서버로 전달하는 값이 숨겨지면 길이제한 없다 -->
+    <form action="1_기본.html" method="get">
+        <input type="text" name="a1" value="aaa" readonly="readonly"><br> <!--readonly 읽기전용-->
+        <input type="text" name="a2" value="bbb" disabled="disabled"><br> <!--disabled 비활성화-->
+        <button type="submit">submit</button>
+        <button type="reset">reset</button><br>
+    </form>
+    <form action="1_기본.html" method="get">
+        <input type="text" name="a3" size="10"><br> <!--크기-->
+        <input type="text" name="a4" style="width: 100px;"><br>
+        <button type="submit">button</button>
+        <button type="reset">reset</button><br>
+    </form>
+    <form action="1_기본.html" method="get">
+        <input type="text" name="a5" maxlength="5"><br> <!--글자수제한-->
+        <input type="text" name="a6" autocomplete="on"><br> <!--자동완성-->
+        <button type="submit">button</button>
+        <button type="reset">reset</button><br>
+    </form>
+    <form action="1_기본.html" method="get">
+        <input type="text" name="a7" autofocus="autofocus"><br> <!--커서위치-->
+        <input type="text" name="a8" placeholder="숫자를 입력하시오"><br>
+        <input type="text" name="a9" required="required"><br> <!--필수입력-->
+        <button type="submit">button</button>
+        <button type="reset">reset</button><br>
+    </form>
+</body>
+</html>
