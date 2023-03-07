@@ -1,4 +1,5 @@
 # LearningPractice
+학습 내용 정리
 ## python
 - python 기초문법 학습
 ## html
